@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>Новости - ГБУ Жилищник района Западное Дегунино</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Montserrat;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #4a90e2;
+            width: 100%;
+            height: 80px;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 15px;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #222;
+        }
+
+        /* ===== NEWS ITEMS ===== */
+        .news-item {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-image {
+            flex-shrink: 0;
+            width: 280px;
+            height: 180px;
+            background: #e8f4f8;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .news-image-placeholder {
+            width: 100%;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        .news-date {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .news-excerpt {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .news-description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* Special styling for the first news item with infographic */
+        .news-item.featured .news-image {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+        }
+
+        .news-item.featured {
+            flex-direction: column;
+        }
+
+        .news-item.featured .news-content {
+            margin-top: 20px;
+        }
+
+        /* ===== SOCIAL SECTION ===== */
+        .social-section {
+            margin-top: 40px;
+            padding: 30px 0;
+        }
+
+        .social-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: #4a76a8;
+            border-radius: 8px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #3a6698;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            margin-top: 40px;
+            padding: 30px 0;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .footer-contacts h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #333;
+        }
+
+        .footer-contacts p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+
+        .footer-copyright {
+            font-size: 13px;
+            color: #888;
+            text-align: right;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            nav {
+                margin-left: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-container {
+                padding: 30px 20px;
+            }
+
+            .news-item {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .news-image {
+                width: 100%;
+                height: 200px;
+            }
+
+            footer {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-copyright {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <div class="logo-icon"><img src="icons/logo.svg" alt=""></div>
+                <span class="logo-text">ГБУ Жилищник района Западное Дегунино</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="index.html#gallery">Галерея</a>
+                <a href="info.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+        <h1 class="page-title">Новости</h1>
+
+        <!-- News Item 1 - Featured -->
+        <article class="news-item featured">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/infographic.png" alt="infographic">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">24 декабря</div>
+                <h2 class="news-title">Как согласовать планировку</h2>
+                <p class="news-excerpt">Какие работы по перепланировке и переустройству квартиры нужно согласовывать с Мосжилинспекцией. Какие документы нужны для согласования перепланировки</p>
+            </div>
+        </article>
+
+        <!-- News Item 2 -->
+        <article class="news-item">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/newsimg1.png" alt="Электронный ЕПД">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">16 декабря</div>
+                <h2 class="news-title">Откажитесь от бумажного ЕПД и получайте его в электронном виде</h2>
+                <p class="news-description">Теперь вы можете получать единый платежный документ в электронном виде на вашу электронную почту. Это удобно и экологично!</p>
+            </div>
+        </article>
+
+        <!-- News Item 3 -->
+        <article class="news-item">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/newsimg2.png" alt="Вакцина от бешенства">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">27 ноября</div>
+                <h2 class="news-title">Вакцина от бешенства</h2>
+                <p class="news-description">Уважаемые владельцы домашних животных! Публикуем для вас график проведения выездных прививочных пунктов (вакцина домашних животных от бешенства) на территории ВАО. В нашем районе пункт будет открыт 22.04.2025г. с 15:00 до 17:00 по адресу: Измайловский проспект...</p>
+            </div>
+        </article>
+
+        <!-- News Item 4 -->
+        <article class="news-item">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/newsimg3.png" alt="Добрая ёлка">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">18 ноября</div>
+                <h2 class="news-title">Благотворительная акция "Добрая ёлка"</h2>
+                <p class="news-description"><em>Чтобы Дед Мороз смог стать каждому!</em></p>
+            </div>
+        </article>
+
+        <!-- News Item 5 -->
+        <article class="news-item">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/newsimg4.png" alt="Рядка и Ритмика">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">12 ноября</div>
+                <h2 class="news-title">Социально-значимая информация на полях ЕПД</h2>
+                <p class="news-description">Информация о социальных проектах и мероприятиях района</p>
+            </div>
+        </article>
+
+        <!-- News Item 6 -->
+        <article class="news-item">
+            <div class="news-image">
+                <div class="news-image-placeholder">
+                    <img src="img/newsimg5.png" alt="Ярмарка УК">
+                </div>
+            </div>
+            <div class="news-content">
+                <div class="news-date">10 сентября</div>
+                <h2 class="news-title">"Ярмарка УК" - выставка PRO управление недвижимостью</h2>
+                <p class="news-description">21-23 ноября, Москва, ВДНХ, павильон №57</p>
+            </div>
+        </article>
+
+        <!-- Social Section -->
+        <section class="social-section">
+            <div class="social-label">Мы в социальных сетях:</div>
+            <a href="#" class="social-icon" title="ВКонтакте"><img src="icons/socialimg.svg" alt=""></a>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-contacts">
+                <h3>Контакты</h3>
+                <p><strong>Тел:</strong> +7 (499) 488-99-54</p>
+                <p><strong>Email:</strong> gbyzd@mail.ru</p>
+            </div>
+            <div class="footer-copyright">
+                <p>© 2023 ГБУ Жилищник района Западное Дегунино. Все права защищены.</p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>

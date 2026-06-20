@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg" />
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <title>ГБУ Жилищник района Западное Дегунино</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Montserrat;
+            min-height: 100vh;
+            color: #333;
+        }
+
+        /* ===== HEADER ===== */
+        header {
+            background: #4a90e2;
+            width: 100%;
+            height: 80px;
+        }
+
+        .header-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 15px;
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 70px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-text {
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        nav {
+            margin-left: auto;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.8;
+        }
+
+        /* ===== MAIN CONTENT ===== */
+        .main-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 30px;
+        }
+
+        .page-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            color: #222;
+        }
+
+        .org-name {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #333;
+        }
+
+        /* ===== CONTACT SECTIONS ===== */
+        .contact-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .contact-section:last-child {
+            border-bottom: none;
+        }
+
+        .section-label {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        .contact-list {
+            list-style: none;
+        }
+
+        .contact-list li {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .contact-list strong {
+            color: #333;
+        }
+
+        /* ===== SCHEDULE TABLE ===== */
+        .schedule-box {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        .schedule-item {
+            font-size: 14px;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .schedule-item strong {
+            color: #333;
+            display: inline-block;
+            min-width: 150px;
+        }
+
+        /* ===== RECEPTION INFO ===== */
+        .reception-title {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .reception-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .reception-text ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .reception-text li {
+            margin-bottom: 8px;
+        }
+
+        .phone-highlight {
+            font-weight: 600;
+            color: #1a3a6b;
+        }
+
+        /* ===== SOCIAL FOOTER ===== */
+        .social-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .social-label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            transition: background 0.3s;
+        }
+
+        .social-icon:hover {
+            background: #3a6698;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                height: auto;
+                padding: 15px;
+                gap: 10px;
+            }
+
+            nav {
+                margin-left: 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .main-container {
+                padding: 30px 20px;
+            }
+
+            .page-title {
+                font-size: 24px;
+            }
+
+            .org-name {
+                font-size: 20px;
+            }
+
+            .schedule-item strong {
+                min-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-logo {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav {
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="header-logo">
+                <div class="logo-icon"><img src="icons/logo.svg" alt="logo"></div>
+                <span class="logo-text">ГБУ Жилищник района Западное Дегунино</span>
+            </div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="news.html">Новости</a>
+                <a href="index.html#gallery">Галерея</a>
+                <a href="info.html">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-container">
+        <h1 class="page-title">Контактная информация</h1>
+        
+        <h2 class="org-name">ГБУ "Жилищник района Западное Дегунино"</h2>
+
+        <!-- CONTACTS SECTION -->
+        <section class="contact-section">
+            <div class="section-label">Контакты</div>
+            <ul class="contact-list">
+                <li><strong>Номер телефона:</strong> 8 (499) 488-99-54</li>
+                <li><strong>Электронная почта:</strong> gby.zd@mail.ru</li>
+                <li><strong>Фактический адрес:</strong> Россия, г. Москва, Дегунинская улица, 1, корпус 1</li>
+                <li><strong>Юридический адрес:</strong> г. Москва, Дегунинская улица, 1, корпус 1</li>
+            </ul>
+        </section>
+
+        <!-- SCHEDULE SECTION -->
+        <section class="contact-section">
+            <div class="section-label">График работы</div>
+            <div class="schedule-box">
+                <div class="schedule-item"><strong>Понедельник-четверг:</strong> с 8:00 до 17:00</div>
+                <div class="schedule-item"><strong>Пятница:</strong> с 8:00 до 15:45</div>
+                <div class="schedule-item"><strong>Обед:</strong> с 12:30 до 13:15</div>
+            </div>
+        </section>
+
+        <!-- RECEPTION SECTION -->
+        <section class="contact-section">
+            <div class="reception-title">
+                Прием граждан в Государственном бюджетном учреждении города Москвы<br>
+                «Жилищник района Западное Дегунино»
+            </div>
+            
+            <div class="reception-text">
+                Личный прием граждан проводится без предварительной записи еженедельно 6 раз в неделю:
+                <ul>
+                    <li>Руководителем: вторник с 16:00 до 19:00; четверг с 17:00 до 20:00;</li>
+                    <li>Первыми заместителями, заместителями руководителя: понедельник с 17:00 до 20:00, пятница с 16:00 до 19:00;</li>
+                    <li>Главным инженером, начальниками участков учреждения: среда с 17:00 до 20:00, суббота с 10:00 до 14:00.</li>
+                </ul>
+            </div>
+
+            <div class="reception-text">
+                Прием осуществляется непосредственно в одном из помещений управляющей организации по адресам: 
+                ул. Первомайская, д. 107А; ул. Средняя Первомайская, д. 44.
+            </div>
+
+            <div class="reception-text">
+                При личном приеме гражданин должен иметь с собой документ, удостоверяющий личность.<br>
+                Телефон для справок: <span class="phone-highlight">+7 (495) 965-75-93</span>
+            </div>
+        </section>
+
+        <!-- SOCIAL FOOTER -->
+        <div class="social-footer">
+            <div class="social-label">Мы в социальных сетях:</div>
+            <a href="#" class="social-icon" title="ВКонтакте"><img src="icons/socialimg.svg" alt=""></a>
+        </div>
+    </main>
+
+</body>
+</html>
