@@ -210,49 +210,207 @@
         }
 
         /* ===== RESPONSIVE ===== */
+        @media (max-width: 1440px) {
+            .header-container,
+            .main-container {
+                max-width: 1200px;
+            }
+
+            .page-title {
+                font-size: 26px;
+            }
+
+            .org-name {
+                font-size: 22px;
+            }
+        }
+
+        /* ===== RESPONSIVE: 1024px ===== */
+        @media (max-width: 1024px) {
+            .header-container,
+            .main-container {
+                max-width: 960px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .main-container {
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+
+            .page-title {
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+
+            .org-name {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .contact-section {
+                margin-bottom: 30px;
+                padding-bottom: 25px;
+            }
+
+            .section-label {
+                font-size: 16px;
+            }
+
+            .schedule-item strong {
+                min-width: 130px;
+            }
+        }
+
+        /* ===== RESPONSIVE: 768px ===== */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
                 height: auto;
-                padding: 15px;
+                padding: 15px 20px;
                 gap: 10px;
             }
 
             nav {
                 margin-left: 0;
+                gap: 20px;
                 flex-wrap: wrap;
                 justify-content: center;
             }
 
+            nav a {
+                font-size: 13px;
+            }
+
             .main-container {
-                padding: 30px 20px;
+                padding: 25px 20px;
             }
 
             .page-title {
-                font-size: 24px;
+                font-size: 22px;
+                margin-bottom: 20px;
             }
 
             .org-name {
-                font-size: 20px;
+                font-size: 18px;
+                margin-bottom: 18px;
+            }
+
+            .section-label {
+                font-size: 15px;
+            }
+
+            .contact-list li {
+                font-size: 13px;
+            }
+
+            .schedule-box {
+                padding: 15px;
+            }
+
+            .schedule-item {
+                font-size: 13px;
             }
 
             .schedule-item strong {
                 min-width: 120px;
             }
+
+            .reception-title {
+                font-size: 16px;
+            }
+
+            .reception-text {
+                font-size: 13px;
+                line-height: 1.6;
+            }
         }
 
-        @media (max-width: 480px) {
-            .header-logo {
-                flex-direction: column;
-                text-align: center;
+        /* ===== RESPONSIVE: 390px ===== */
+        @media (max-width: 390px) {
+            .header-container {
+                padding: 12px 15px;
+            }
+
+            .logo-text {
+                font-size: 12px;
             }
 
             nav {
-                gap: 15px;
+                gap: 12px;
             }
 
             nav a {
-                font-size: 13px;
+                font-size: 12px;
+            }
+
+            .main-container {
+                padding: 20px 15px;
+            }
+
+            .page-title {
+                font-size: 20px;
+                margin-bottom: 18px;
+            }
+
+            .org-name {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .contact-section {
+                margin-bottom: 25px;
+                padding-bottom: 20px;
+            }
+
+            .section-label {
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+
+            .contact-list li {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+
+            .schedule-box {
+                padding: 12px;
+            }
+
+            .schedule-item {
+                font-size: 12px;
+                margin-bottom: 6px;
+            }
+
+            .schedule-item strong {
+                min-width: 100px;
+                display: block;
+            }
+
+            .reception-title {
+                font-size: 14px;
+                margin-bottom: 15px;
+            }
+
+            .reception-text {
+                font-size: 12px;
+                line-height: 1.5;
+                margin-bottom: 12px;
+            }
+
+            .reception-text ul {
+                padding-left: 15px;
+                margin: 10px 0;
+            }
+
+            .reception-text li {
+                margin-bottom: 6px;
+            }
+
+            .social-footer {
+                margin-top: 30px;
+                padding-top: 15px;
             }
         }
     </style>
